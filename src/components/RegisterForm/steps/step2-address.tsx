@@ -17,13 +17,11 @@ function Step2() {
 
   function handleInputBlur() {
     setValues(watch());
-    // eslint-disable-next-line no-console
-    console.log();
   }
 
   return (
     <>
-      <Typography variant="h6">Step 2</Typography>;
+      <Typography variant="h6">Step 2</Typography>
       <Controller
         name="address"
         control={control}

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Button, Divider, Paper } from '@mui/material';
+import { Button, Divider } from '@mui/material';
 
 import { useStepForm } from '../../hooks/useStepForm';
 
@@ -13,26 +13,24 @@ function StepFormTemplate({ steps }: StepFormTemplateProps) {
 
   return (
     <>
-      <Paper>
-        {steps[currentPage - 1]}
+      {steps[currentPage - 1]}
 
-        <Divider />
+      <Divider />
 
-        <Button
-          variant="outlined"
-          onClick={previousStep}
-          disabled={currentPage <= 1}
-        >
-          Voltar
-        </Button>
+      <Button
+        variant="outlined"
+        onClick={previousStep}
+        disabled={currentPage <= 1}
+      >
+        Voltar
+      </Button>
 
-        <Button
-          variant={isLastStep ? 'contained' : 'outlined'}
-          onClick={() => nextStep()}
-        >
-          Próximo
-        </Button>
-      </Paper>
+      <Button
+        variant={isLastStep ? 'contained' : 'outlined'}
+        onClick={() => nextStep()}
+      >
+        Próximo
+      </Button>
     </>
   );
 }

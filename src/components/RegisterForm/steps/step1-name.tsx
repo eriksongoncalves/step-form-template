@@ -22,7 +22,7 @@ function Step1() {
 
   return (
     <>
-      <Typography variant="h6">Step 1</Typography>;
+      <Typography variant="h6">Step 1</Typography>
       <Controller
         name="firstName"
         control={control}
